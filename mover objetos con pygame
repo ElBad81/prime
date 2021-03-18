@@ -1,0 +1,29 @@
+import pygame
+import sys
+
+pygame.init()
+
+red=(255,0,0)
+green=(100,200,0)
+
+size=(800,600)
+
+posX=0
+posY=1
+
+ventana=pygame.display.set_mode(size)
+ambulancia=pygame.image.load('ambulancia.png')
+
+while True:
+  ventana.fill(green)
+  ventana.blit(ambulancia,(posX,posY))
+
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      sys.exit()
+    elif event.type == pygame.MOUSEBUTTONDOWN:
+      posX,posY=pygame.mouse.get_pos()
+      posX=posX-90
+      posY=posY-75
+      
+  pygame.display.update()
