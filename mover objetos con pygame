@@ -21,7 +21,8 @@ while True:
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
       sys.exit()
-    elif event.type == pygame.MOUSEBUTTONDOWN:
+    elif pygame.mouse.get_pressed() == (1, 0, 0):
+#    elif event.type == pygame.MOUSEBUTTONDOWN:
       posX,posY=pygame.mouse.get_pos()
       posX=posX-90
       posY=posY-75
