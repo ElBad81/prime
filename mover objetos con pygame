@@ -21,6 +21,7 @@ posY=1
 icono=pygame.image.load('icono.png')
 ventana=pygame.display.set_mode(size)
 pygame.display.set_icon(icono)
+pygame.display.set_caption('Hablar Bien')
 ambulancia=pygame.image.load('ambulancia.png')
 
 while True:
@@ -30,6 +31,7 @@ while True:
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
       sys.exit()
+    
     elif pygame.mouse.get_pressed() == (1, 0, 0):
 #      event.type == pygame.MOUSEBUTTONDOWN:
       
